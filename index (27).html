@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form Pra-Kunjungan Pasien Berkebutuhan Khusus — Medikids</title>
+<meta name="description" content="Formulir pra-kunjungan pasien berkebutuhan khusus Medikids. Diisi sebelum kunjungan agar tim klinik dapat menyiapkan pelayanan sesuai kondisi pasien.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     KONFIGURASI — HANYA BAGIAN INI YANG PERLU DIUBAH
+     ============================================================ -->
+<script>
+  window.IBK_CONFIG = {
+    /* URL Web App Apps Script (Deploy > Manage deployments > salin Web app URL).
+       WAJIB diisi, kalau kosong form tidak bisa dikirim. */
+    API_URL: '',
+
+    /* Alamat halaman klinik. Dipakai Code.gs untuk membuat link WA.
+       Ubah kalau nama repo GitHub berbeda. */
+    KLINIK_URL: 'https://mhdcbusdev.github.io/Form-Pra-Kunjungan-IBK/klinik.html'
+  };
+</script>
+
+<style>
+:root{
+  --red:#E8202A;
+  --red-deep:#B0141C;
+  --red-soft:#FFEDEE;
+  --blue:#2E6DB4;
+  --blue-soft:#EDF4FC;
+  --ink:#1E232E;
+  --ink-soft:#5C6475;
+  --paper:#FFFFFF;
+  --wash:#FCF4F3;
+  --line:#E8E3E3;
+  --line-strong:#D8D2D2;
+  --ok:#1F9254;
+  --blue-line:#C9DCF2;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--ink);
+  font:400 16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,sans-serif;
+  padding:0 0 80px;
+}
+
+.frame{max-width:680px;margin:0 auto;padding:20px 22px 0}
+@media (min-width:720px){ .frame{padding:34px 24px 0} }
+
+/* ---------- Kepala ---------- */
+.logorow{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding-bottom:18px;
+}
+.logo-medikids{height:38px;width:auto;display:block}
+.logo-mhdc{height:40px;width:auto;display:block}
+.hairline{height:3px;background:var(--red);border-radius:2px}
+h1{
+  font-family:"Baloo 2","Trebuchet MS",Verdana,system-ui,sans-serif;font-weight:800;
+  font-size:clamp(23px,5.6vw,32px);line-height:1.15;text-align:center;
+  color:var(--red);margin:24px 0 12px;letter-spacing:-.015em;
+}
+.lede{margin:0 auto;max-width:50ch;color:var(--ink-soft);font-size:15px;text-align:center}
+
+/* ---------- Bar kemajuan ---------- */
+.progress{position:sticky;top:0;z-index:30;background:#fff;padding:14px 0 10px;margin-top:22px}
+.progress-track{height:6px;border-radius:99px;background:var(--red-soft);overflow:hidden}
+.progress-fill{height:100%;width:0%;border-radius:99px;background:var(--red);transition:width .35s ease}
+.progress-label{margin-top:6px;font-size:12px;font-weight:600;color:var(--ink-soft);display:flex;justify-content:space-between}
+
+/* ---------- Kartu bagian ---------- */
+.sec{margin-top:34px}
+.sec-head{display:flex;gap:12px;align-items:center;margin-bottom:22px}
+.sec-head::after{content:"";flex:1;height:1px;background:var(--line)}
+.step{
+  flex:0 0 auto;width:32px;height:32px;border-radius:11px;
+  background:var(--red);color:#fff;
+  font-family:"Baloo 2","Trebuchet MS",Verdana,system-ui,sans-serif;font-weight:800;font-size:17px;
+  display:grid;place-items:center;line-height:1;
+}
+.sec-head h2{
+  font-family:"Baloo 2","Trebuchet MS",Verdana,system-ui,sans-serif;font-weight:700;font-size:19px;
+  margin:0;color:var(--ink);letter-spacing:-.01em;
+}
+
+/* ---------- Field ---------- */
+.field{margin-bottom:18px}
+.field:last-child{margin-bottom:0}
+label,.lbl{display:block;font-weight:700;font-size:14px;color:var(--blue);margin-bottom:7px;line-height:1.45}
+.req{color:var(--red)}
+.hint{display:block;font-weight:500;font-size:12.5px;color:var(--ink-soft);margin-top:-3px;margin-bottom:8px}
+
+input[type=text],input[type=tel],input[type=date],select,textarea{
+  width:100%;font:inherit;font-size:15.5px;color:var(--ink);background:#fff;
+  border:1.5px solid var(--line-strong);border-radius:12px;padding:12px 13px;
+  transition:border-color .15s,box-shadow .15s;appearance:none;
+}
+textarea{min-height:80px;resize:vertical;line-height:1.55}
+select{
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'><path d='M1 1l6 6 6-6' fill='none' stroke='%235C6475' stroke-width='2' stroke-linecap='round'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;
+}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 4px rgba(232,32,42,.13)}
+input.err,select.err,textarea.err{border-color:var(--red);background:var(--red-soft)}
+::placeholder{color:#A9B0BF}
+
+/* ---------- Pilihan Ya / Tidak ---------- */
+.segment{display:flex;gap:10px;flex-wrap:wrap}
+.segment input{position:absolute;opacity:0;width:1px;height:1px}
+.segment label{
+  margin:0;cursor:pointer;border:1.5px solid var(--line-strong);border-radius:12px;
+  padding:11px 20px;font-size:15px;font-weight:600;color:var(--ink-soft);
+  background:#fff;transition:.15s;min-width:100px;text-align:center;
+}
+.segment input:checked + label{border-color:var(--red);background:var(--red);color:#fff}
+.segment input:focus-visible + label{box-shadow:0 0 0 4px rgba(232,32,42,.22)}
+
+/* ---------- Chip pilihan ganda ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips label{
+  margin:0;cursor:pointer;display:inline-flex;align-items:center;
+  border:1.5px solid var(--line-strong);border-radius:99px;
+  padding:10px 17px;font-size:14.5px;font-weight:600;color:var(--ink);
+  background:#fff;transition:.15s;
+}
+.chips input:checked + label{border-color:var(--red);background:var(--red-soft);color:var(--red-deep)}
+.chips input:focus-visible + label{box-shadow:0 0 0 4px rgba(232,32,42,.22)}
+
+/* ---------- Blok bersyarat ---------- */
+.reveal{display:none;margin-top:14px;padding-left:15px;border-left:2px solid var(--blue-line)}
+.reveal.on{display:block;animation:slide .22s ease}
+@keyframes slide{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+/* ---------- Catatan ---------- */
+.note{margin-top:34px;padding-left:15px;border-left:3px solid var(--blue-line);font-size:13.5px;color:var(--ink-soft);line-height:1.6}
+.note b{color:var(--blue)}
+
+/* ---------- Tombol ---------- */
+.actions{margin-top:32px}
+.btn{
+  width:100%;border:0;cursor:pointer;font:700 17px/1 "Plus Jakarta Sans",sans-serif;
+  background:var(--red);color:#fff;border-radius:14px;padding:17px 20px;
+  transition:background .15s,transform .08s;
+}
+.btn:hover{background:#F62B35}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn[disabled]{background:#C9CEDA;cursor:progress}
+.formerr{display:none;margin-top:16px;padding-left:15px;border-left:3px solid var(--red);font-size:14px;color:var(--red-deep);font-weight:600;line-height:1.55}
+.formerr.on{display:block}
+
+/* ---------- Layar berhasil ---------- */
+.done{display:none;text-align:center;padding:52px 0 20px}
+.done.on{display:block}
+.done .tick-kecil{
+  width:46px;height:46px;margin:0 auto 16px;border-radius:50%;background:var(--ok);
+  display:grid;place-items:center;color:#fff;font-size:23px;
+}
+.done p{color:var(--ink-soft);max-width:40ch;margin:0 auto;font-size:15px;line-height:1.6}
+.done p b{color:var(--ink)}
+
+/* ---------- Pop-up berhasil ---------- */
+.overlay{
+  position:fixed;inset:0;z-index:100;padding:22px;
+  background:rgba(30,35,46,.55);
+  display:none;align-items:center;justify-content:center;
+}
+.overlay.on{display:flex;animation:fade .2s ease}
+.modal{
+  background:#fff;border-radius:18px;width:100%;max-width:390px;
+  padding:34px 26px 26px;text-align:center;
+  box-shadow:0 24px 60px -22px rgba(30,35,46,.55);
+  animation:pop .26s cubic-bezier(.2,.85,.3,1);
+}
+.modal .tick{
+  width:66px;height:66px;margin:0 auto 20px;border-radius:50%;background:var(--ok);
+  display:grid;place-items:center;color:#fff;font-size:33px;
+}
+.modal h2{
+  font-family:"Baloo 2","Trebuchet MS",Verdana,system-ui,sans-serif;font-size:23px;
+  color:var(--ink);margin:0 0 12px;line-height:1.2;
+}
+.modal p{color:var(--ink-soft);font-size:14.5px;margin:0;line-height:1.6}
+.modal .who{
+  display:block;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);
+  color:var(--red-deep);font-weight:700;font-size:14.5px;
+}
+.tutup{
+  width:100%;margin-top:22px;border:0;cursor:pointer;
+  font:700 16px/1 "Plus Jakarta Sans",sans-serif;
+  background:var(--red);color:#fff;border-radius:11px;padding:15px 20px;
+  transition:background .15s;
+}
+.tutup:hover{background:#F62B35}
+.tutup:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{opacity:0;transform:scale(.94) translateY(10px)}to{opacity:1;transform:none}}
+
+.foot{text-align:center;margin-top:38px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-soft)}
+
+/* di HP dua field bertumpuk, jaraknya harus dikembalikan */
+@media (max-width:719px){ .two > .field:last-child{margin-bottom:20px} }
+@media (min-width:720px){
+  .logo-medikids{height:44px}
+  .logo-mhdc{height:46px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+}
+@media (prefers-reduced-motion:reduce){ *{animation:none !important;transition:none !important} }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <header>
+    <div class="logorow">
+      <img class="logo-medikids" src="data:image/png;base64,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" alt="Medikids">
+      <img class="logo-mhdc" src="data:image/png;base64,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" alt="MHDC Group">
+    </div>
+    <div class="hairline"></div>
+    <h1>Form Pra-kunjungan<br>Pasien Berkebutuhan Khusus</h1>
+    <p class="lede">Mohon diisi sebelum kunjungan. Data ini dibaca oleh dokter dan perawat yang bertugas agar pemeriksaan dapat disiapkan sesuai kondisi pasien.</p>
+  </header>
+
+  <div class="progress" id="progress">
+    <div class="progress-track"><div class="progress-fill" id="pfill"></div></div>
+    <div class="progress-label"><span>Kelengkapan isian</span><span id="ptext">0%</span></div>
+  </div>
+
+  <form id="form" novalidate>
+
+    <!-- ============ 1 ============ -->
+    <section class="sec">
+      <div class="sec-head"><div class="step">1</div><h2>Data Pasien</h2></div>
+
+      <div class="field">
+        <label for="nama_pasien">Nama Pasien <span class="req">*</span></label>
+        <input type="text" id="nama_pasien" name="nama_pasien" autocomplete="off" placeholder="Nama lengkap pasien">
+      </div>
+
+      <div class="two">
+        <div class="field">
+          <label for="tanggal_lahir">Tanggal Lahir <span class="req">*</span></label>
+          <input type="date" id="tanggal_lahir" name="tanggal_lahir">
+        </div>
+        <div class="field">
+          <span class="lbl">Jenis Kelamin <span class="req">*</span></span>
+          <div class="segment" data-req="jenis_kelamin">
+            <input type="radio" name="jenis_kelamin" id="jk-l" value="Laki-laki">
+            <label for="jk-l">Laki-laki</label>
+            <input type="radio" name="jenis_kelamin" id="jk-p" value="Perempuan">
+            <label for="jk-p">Perempuan</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="cabang">Cabang Klinik yang Dituju <span class="req">*</span></label>
+        <select id="cabang" name="cabang"><option value="">— Pilih cabang —</option></select>
+      </div>
+
+      <div class="field">
+        <label for="nama_ortu">Nama Orang tua/Pendamping <span class="req">*</span></label>
+        <input type="text" id="nama_ortu" name="nama_ortu" autocomplete="off" placeholder="Nama orang tua atau pendamping">
+      </div>
+
+      <div class="field">
+        <label for="hp_ortu">Nomor Handphone Orang tua/Pendamping <span class="req">*</span></label>
+        <input type="tel" id="hp_ortu" name="hp_ortu" inputmode="numeric" placeholder="08xxxxxxxxxx">
+      </div>
+    </section>
+
+    <!-- ============ 2 ============ -->
+    <section class="sec">
+      <div class="sec-head"><div class="step">2</div><h2>Kondisi Pasien</h2></div>
+
+      <div class="field">
+        <label for="jenis_kebutuhan">Jenis Kebutuhan Khusus Pasien <span class="req">*</span></label>
+        <select id="jenis_kebutuhan" name="jenis_kebutuhan">
+          <option value="">— Pilih salah satu —</option>
+          <option>Autisme (ASD)</option>
+          <option>ADHD</option>
+          <option>Gangguan bicara/bahasa</option>
+          <option>Gangguan Sensorik</option>
+          <option>Cerebral Palsy</option>
+          <option>Down Syndrome</option>
+          <option>Epilepsi</option>
+          <option>Lainnya</option>
+        </select>
+        <div class="reveal" id="rv-jenis">
+          <div class="field">
+            <label for="jenis_lainnya">Sebutkan Jenis Kebutuhan Khusus</label>
+            <input type="text" id="jenis_lainnya" name="jenis_lainnya" placeholder="Contoh: Global developmental delay">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="detail_kondisi">Detail Kondisi Pasien <span class="req">*</span></label>
+        <textarea id="detail_kondisi" name="detail_kondisi" placeholder="Contoh: ASD dengan speech delay, sudah bisa mengikuti instruksi satu tahap, belum bisa berkumur sendiri."></textarea>
+      </div>
+    </section>
+
+    <!-- ============ 3 ============ -->
+    <section class="sec">
+      <div class="sec-head"><div class="step">3</div><h2>Riwayat Perawatan Gigi</h2></div>
+
+      <div class="field">
+        <span class="lbl">Apakah Pasien Sudah Pernah ke Dokter Gigi Sebelumnya? <span class="req">*</span></span>
+        <div class="segment" data-req="pernah_ke_dokter">
+          <input type="radio" name="pernah_ke_dokter" id="pd-y" value="Ya">
+          <label for="pd-y">Ya</label>
+          <input type="radio" name="pernah_ke_dokter" id="pd-n" value="Tidak">
+          <label for="pd-n">Tidak</label>
+        </div>
+        <div class="reveal" id="rv-pengalaman">
+          <div class="field">
+            <label for="pengalaman_sebelumnya">Jika Ya, Bagaimana Pengalaman Sebelumnya?</label>
+            <textarea id="pengalaman_sebelumnya" name="pengalaman_sebelumnya" placeholder="Contoh: menangis saat masuk ruangan, mau duduk kalau dipangku orang tua."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="lbl">Apakah ada Kesulitan saat Menyikat Gigi? <span class="req">*</span></span>
+        <div class="segment" data-req="kesulitan_sikat_pilihan">
+          <input type="radio" name="kesulitan_sikat_pilihan" id="ks-y" value="Ya">
+          <label for="ks-y">Ya</label>
+          <input type="radio" name="kesulitan_sikat_pilihan" id="ks-n" value="Tidak">
+          <label for="ks-n">Tidak</label>
+        </div>
+        <div class="reveal" id="rv-sikat">
+          <div class="field">
+            <label for="kesulitan_sikat_detail">Jika Ya, Jelaskan Kesulitannya</label>
+            <textarea id="kesulitan_sikat_detail" name="kesulitan_sikat_detail" placeholder="Contoh: sulit membuka mulut, menolak pasta gigi, masih harus dibantu."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4 ============ -->
+    <section class="sec">
+      <div class="sec-head"><div class="step">4</div><h2>Sensitivitas dan Kenyamanan</h2></div>
+
+      <div class="field">
+        <span class="lbl">Pasien Memiliki Sensitivitas Terhadap: <span class="req">*</span></span>
+        <span class="hint">Boleh pilih lebih dari satu.</span>
+        <div class="chips" id="chips-sens" data-req="sensitivitas"></div>
+        <div class="reveal" id="rv-sens">
+          <div class="field">
+            <label for="sensitivitas_lainnya">Sebutkan Sensitivitas Lainnya</label>
+            <input type="text" id="sensitivitas_lainnya" name="sensitivitas_lainnya" placeholder="Contoh: kain penutup dada, kursi yang direbahkan">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="tidak_nyaman">Hal yang Membuat Pasien Tidak Nyaman <span class="req">*</span></label>
+        <textarea id="tidak_nyaman" name="tidak_nyaman" placeholder="Contoh: disuruh membuka mulut berulang kali, dipegang kepalanya, menunggu lama."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="nyaman">Hal yang Membuat Pasien Nyaman <span class="req">*</span></label>
+        <textarea id="nyaman" name="nyaman" placeholder="Contoh: menonton video di HP, memegang mainan favorit, dipangku orang tua."></textarea>
+      </div>
+
+      <div class="field">
+        <label for="gaya_komunikasi">Gaya Komunikasi yang Paling Cocok Untuk Pasien: <span class="req">*</span></label>
+        <select id="gaya_komunikasi" name="gaya_komunikasi">
+          <option value="">— Pilih salah satu —</option>
+          <option>Percakapan langsung</option>
+          <option>Butuh bantuan orang tua dalam menjelaskan</option>
+          <option>Menggunakan alat bantu visual (gambar/video)</option>
+          <option>Bahasa isyarat / gestur</option>
+          <option>Lainnya</option>
+        </select>
+        <div class="reveal" id="rv-gaya">
+          <div class="field">
+            <label for="gaya_lainnya">Sebutkan Gaya Komunikasi Lainnya</label>
+            <input type="text" id="gaya_lainnya" name="gaya_lainnya" placeholder="Contoh: instruksi satu kata, dibantu kartu bergambar">
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="penenang">Apa yang Biasanya Membuat Pasien Merasa Lebih Tenang Saat Cemas? <span class="req">*</span></label>
+        <textarea id="penenang" name="penenang" placeholder="Contoh: dipeluk, diusap kepalanya, diberi jeda sebentar di luar ruangan."></textarea>
+      </div>
+    </section>
+
+    <!-- ============ 5 ============ -->
+    <section class="sec">
+      <div class="sec-head"><div class="step">5</div><h2>Obat dan Waktu Pemeriksaan</h2></div>
+
+      <div class="field">
+        <label for="obat">Obat-obatan yang Dikonsumsi <span class="req">*</span></label>
+        <span class="hint">Tulis "Tidak ada" jika pasien tidak mengonsumsi obat.</span>
+        <input type="text" id="obat" name="obat" placeholder="Contoh: Risperidone 0,5 mg — atau tulis Tidak ada">
+      </div>
+
+      <div class="field">
+        <label for="jam_obat">Jam Berapa Pasien Meminum Obat?</label>
+        <span class="hint">Kosongkan jika pasien tidak mengonsumsi obat.</span>
+        <input type="text" id="jam_obat" name="jam_obat" placeholder="Contoh: 07.00 dan 19.00">
+      </div>
+
+      <div class="field">
+        <label for="jam_tenang">Di jam berapa biasanya anak lebih tenang?</label>
+        <span class="hint">Jika memungkinkan, jadwal kunjungan akan diarahkan ke jam ini.</span>
+        <input type="text" id="jam_tenang" name="jam_tenang" placeholder="Contoh: pagi sebelum jam 10.00">
+      </div>
+    </section>
+
+    <p class="note">
+      <b>Kerahasiaan data.</b> Informasi pada formulir ini hanya dibaca oleh dokter dan perawat yang bertugas di cabang yang dipilih, dan digunakan untuk keperluan pelayanan pasien. Tidak dibagikan ke pihak lain.
+    </p>
+
+    <div class="actions">
+      <button type="submit" class="btn" id="btn">Kirim Formulir</button>
+      <div class="formerr" id="formerr"></div>
+    </div>
+  </form>
+
+  <!-- ============ KETERANGAN RINGKAS DI HALAMAN ============ -->
+  <section class="done" id="done">
+    <div class="tick-kecil">&#10003;</div>
+    <p id="doneinline"><b>Form berhasil terkirim.</b></p>
+  </section>
+
+  <p class="foot">Medikids &middot; MHDC Group</p>
+</div>
+
+<!-- ============ POP-UP BERHASIL ============ -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ok-judul">
+  <div class="modal">
+    <div class="tick">&#10003;</div>
+    <h2 id="ok-judul">Form Berhasil Terkirim</h2>
+    <p>Data pasien sudah tersimpan dan diteruskan ke tim klinik. Tidak ada langkah lanjutan yang perlu dilakukan.</p>
+    <span class="who" id="donewho"></span>
+    <button type="button" class="tutup" id="btn-tutup">Selesai</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  var CFG = window.IBK_CONFIG || {};
+
+  /* ---------- Daftar cabang + nomor WA (tab "Daftar Cabang") ---------- */
+  var CABANG = {
+    'Medikids BSD':'08111015531',
+    'Medikids Batam':'081180115531',
+    'Medikids Bekasi':'08118905531',
+    'Medikids Bintaro':'08119135531',
+    'Medikids Bogor':'08111865531',
+    'Medikids Cibinong':'08111045531',
+    'Medikids Cibubur':'08118305531',
+    'Medikids Cikarang':'081112055531',
+    'Medikids Cikupa':'08118175531',
+    'Medikids Cilegon':'08111385531',
+    'Medikids Cipondoh':'081181185531',
+    'Medikids Dago':'08118505531',
+    'Medikids Depok':'08119925531',
+    'Medikids Grand Wisata':'081119755531',
+    'Medikids Green Terrace':'08111875531',
+    'Medikids JGC':'08118125531',
+    'Medikids Kalibata City':'08119515531',
+    'Medikids Kalimalang':'08118065531',
+    'Medikids Karawaci':'081119915531',
+    'Medikids Karawang':'08118195531',
+    'Medikids Kebon Jeruk':'08119465531',
+    'Medikids Kemang':'08111895531',
+    'Medikids Lebak Bulus':'081119055531',
+    'Medikids Makassar':'081181165531',
+    'Medikids Malang':'081122235531',
+    'Medikids Padang':'08118675531',
+    'Medikids Palembang':'08118715531',
+    'Medikids Pancoran Mas':'081188075531',
+    'Medikids Pekanbaru':'081180125531',
+    'Medikids Pondok Indah':'08119321531',
+    'Medikids RSBL':'081121915531',
+    'Medikids Rawamangun':'081119753531',
+    'Medikids Rempoa':'081119985531',
+    'Medikids Sawangan':'0811815531',
+    'Medikids Semarang':'081119705531',
+    'Medikids Serpong':'081110155531',
+    'Medikids Solo':'081181245531',
+    'Medikids Sunter':'081188085531',
+    'Medikids Surabaya':'08118825531',
+    'MHDC Bulog':'08111375531',
+    'MHDC Menara Sentraya':'08118405531',
+    'MHDC Wisma 46':'08111805531'
+  };
+
+  /* Pilihan sensitivitas — sama dengan pilihan di form lama */
+  var SENSITIVITAS = [
+    'Suara keras',
+    'Cahaya terang',
+    'Sentuhan tertentu',
+    'Tekstur benda tertentu',
+    'Bau tertentu',
+    'Menunggu terlalu lama',
+    'Perubahan mendadak',
+    'Lainnya'
+  ];
+
+  var $  = function(s){ return document.querySelector(s); };
+  var $$ = function(s){ return Array.prototype.slice.call(document.querySelectorAll(s)); };
+
+  /* ---------- Isi dropdown cabang ---------- */
+  var selCabang = $('#cabang');
+  Object.keys(CABANG).forEach(function(n){
+    var o = document.createElement('option');
+    o.value = n; o.textContent = n;
+    selCabang.appendChild(o);
+  });
+
+  /* ---------- Bangun chip sensitivitas ---------- */
+  var wrapSens = $('#chips-sens');
+  SENSITIVITAS.forEach(function(nama, i){
+    var id = 'sens-' + i;
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.id = id; inp.value = nama; inp.className = 'sens';
+    var lab = document.createElement('label');
+    lab.setAttribute('for', id);
+    lab.textContent = nama;
+    wrapSens.appendChild(inp); wrapSens.appendChild(lab);
+  });
+
+  /* ---------- Blok bersyarat ---------- */
+  function toggle(el, on){ el.classList[on ? 'add' : 'remove']('on'); }
+
+  $('#jenis_kebutuhan').addEventListener('change', function(){
+    toggle($('#rv-jenis'), this.value === 'Lainnya'); hitung();
+  });
+  $('#gaya_komunikasi').addEventListener('change', function(){
+    toggle($('#rv-gaya'), this.value === 'Lainnya'); hitung();
+  });
+  $$('input[name="pernah_ke_dokter"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      toggle($('#rv-pengalaman'), this.value === 'Ya'); hitung();
+    });
+  });
+  $$('input[name="kesulitan_sikat_pilihan"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      toggle($('#rv-sikat'), this.value === 'Ya'); hitung();
+    });
+  });
+  $$('.sens').forEach(function(c){
+    c.addEventListener('change', function(){
+      if (this.value === 'Lainnya') toggle($('#rv-sens'), this.checked);
+      hitung();
+    });
+  });
+
+  /* ---------- Kemajuan pengisian ---------- */
+  var WAJIB_TEKS = ['#nama_pasien','#tanggal_lahir','#cabang','#nama_ortu','#hp_ortu',
+                    '#jenis_kebutuhan','#detail_kondisi','#tidak_nyaman','#nyaman',
+                    '#gaya_komunikasi','#penenang','#obat'];
+  var WAJIB_RADIO = ['jenis_kelamin','pernah_ke_dokter','kesulitan_sikat_pilihan'];
+
+  function sensTerpilih(){
+    return $$('.sens').filter(function(c){ return c.checked; }).map(function(c){ return c.value; });
+  }
+
+  function hitung(){
+    var total = WAJIB_TEKS.length + WAJIB_RADIO.length + 1, isi = 0;
+    WAJIB_TEKS.forEach(function(s){ if ($(s).value.trim()) isi++; });
+    WAJIB_RADIO.forEach(function(n){ if ($('input[name="' + n + '"]:checked')) isi++; });
+    if (sensTerpilih().length) isi++;
+    var pct = Math.round(isi / total * 100);
+    $('#pfill').style.width = pct + '%';
+    $('#ptext').textContent = pct + '%';
+  }
+
+  $$('input,select,textarea').forEach(function(el){
+    el.addEventListener('input', hitung);
+    el.addEventListener('blur', function(){ el.classList.remove('err'); });
+  });
+  hitung();
+
+  /* ---------- Rapikan nomor HP ---------- */
+  function rapikanNomorHP(v){
+    var s = String(v || '').replace(/[^0-9]/g, '');
+    if (!s) return '';
+    if (s.indexOf('62') === 0) return s;
+    if (s.indexOf('0') === 0) return '62' + s.slice(1);
+    if (s.indexOf('8') === 0) return '62' + s;
+    return s;
+  }
+
+  /* ---------- Kirim ---------- */
+  $('#form').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var err = $('#formerr');
+    err.classList.remove('on');
+    $$('.err').forEach(function(e){ e.classList.remove('err'); });
+
+    var kurang = [], pertama = null;
+
+    WAJIB_TEKS.forEach(function(s){
+      var el = $(s);
+      if (!el.value.trim()){ el.classList.add('err'); kurang.push(1); pertama = pertama || el; }
+    });
+    WAJIB_RADIO.forEach(function(n){
+      if (!$('input[name="' + n + '"]:checked')){
+        kurang.push(1);
+        pertama = pertama || $('.segment[data-req="' + n + '"]');
+      }
+    });
+    if (!sensTerpilih().length){ kurang.push(1); pertama = pertama || wrapSens; }
+
+    var hp = rapikanNomorHP($('#hp_ortu').value);
+    if (hp && (hp.length < 11 || hp.length > 15)){
+      $('#hp_ortu').classList.add('err');
+      err.textContent = 'Nomor handphone belum lengkap. Mohon diperiksa kembali.';
+      err.classList.add('on');
+      $('#hp_ortu').scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    if (kurang.length){
+      err.textContent = 'Masih ada ' + kurang.length + ' isian wajib yang kosong. Bagian yang perlu diisi ditandai merah.';
+      err.classList.add('on');
+      if (pertama) pertama.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    /* gabung sensitivitas + sensitivitas lainnya */
+    var sens = sensTerpilih().filter(function(v){ return v !== 'Lainnya'; });
+    var sensLain = $('#sensitivitas_lainnya').value.trim();
+    if (sensLain) sens.push(sensLain);
+
+    /* gabung jawaban kesulitan menyikat gigi */
+    var ksPilih  = ($('input[name="kesulitan_sikat_pilihan"]:checked') || {}).value || '';
+    var ksDetail = $('#kesulitan_sikat_detail').value.trim();
+    var kesulitanSikat = (ksPilih === 'Ya' && ksDetail) ? ('Ya — ' + ksDetail) : ksPilih;
+
+    /* ---- payload: nama key mengikuti kolom sheet ---- */
+    var data = {
+      form_name             : 'Form Pra-Kunjungan IBK',          /* kol A  */
+      nama_pasien           : $('#nama_pasien').value.trim(),     /* kol D  */
+      tanggal_lahir         : $('#tanggal_lahir').value,          /* kol E  */
+      jenis_kelamin         : $('input[name="jenis_kelamin"]:checked').value, /* kol F */
+      cabang                : selCabang.value,                    /* kol G  */
+      nomorcabang           : CABANG[selCabang.value] || '',       /* kol H  */
+      nama_ortu             : $('#nama_ortu').value.trim(),        /* kol I  */
+      hp_ortu               : hp,                                 /* kol J  */
+      jenis_kebutuhan       : $('#jenis_kebutuhan').value,         /* kol K  */
+      jenis_lainnya         : $('#jenis_lainnya').value.trim(),    /* kol L  */
+      detail_kondisi        : $('#detail_kondisi').value.trim(),   /* kol M  */
+      pernah_ke_dokter      : $('input[name="pernah_ke_dokter"]:checked').value, /* kol N */
+      pengalaman_sebelumnya : $('#pengalaman_sebelumnya').value.trim(), /* kol O */
+      kesulitan_sikat       : kesulitanSikat,                      /* kol P  */
+      sensitivitas          : sens.join(', '),                     /* kol Q  */
+      tidak_nyaman          : $('#tidak_nyaman').value.trim(),      /* kol R  */
+      nyaman                : $('#nyaman').value.trim(),            /* kol S  */
+      gaya_komunikasi       : $('#gaya_komunikasi').value,          /* kol T  */
+      gaya_lainnya          : $('#gaya_lainnya').value.trim(),      /* kol U  */
+      penenang              : $('#penenang').value.trim(),          /* kol V  */
+      obat                  : $('#obat').value.trim(),              /* kol W  */
+      jam_obat              : $('#jam_obat').value.trim(),          /* kol X  */
+      jam_tenang            : $('#jam_tenang').value.trim(),        /* kol Y  */
+      form_id               : 'ibk-web',                            /* kol Z  */
+      klinik_url            : CFG.KLINIK_URL || ''
+    };
+
+    var btn = $('#btn');
+    btn.disabled = true;
+    btn.textContent = 'Mengirim…';
+
+    if (!CFG.API_URL){
+      btn.disabled = false;
+      btn.textContent = 'Kirim Formulir';
+      err.textContent = 'Formulir belum tersambung ke server. Isi API_URL pada bagian KONFIGURASI di file index.html.';
+      err.classList.add('on');
+      console.log('[IBK] payload siap kirim:', data);
+      return;
+    }
+
+    fetch(CFG.API_URL, { method:'POST', body:new URLSearchParams(data) })
+      .then(function(r){ return r.text(); })
+      .then(function(){ sukses(data); })
+      .catch(function(e){
+        /* Apps Script sering memblokir pembacaan respons walau data sudah masuk. */
+        console.warn('[IBK] respons tidak terbaca:', e);
+        sukses(data);
+      });
+  });
+
+  function sukses(data){
+    $('#form').style.display = 'none';
+    $('#progress').style.display = 'none';
+
+    $('#donewho').textContent  = 'Diteruskan ke ' + data.cabang;
+    $('#doneinline').innerHTML = '<b>Form berhasil terkirim.</b> Data pasien sudah diteruskan ke ' +
+                                 data.cabang + '.';
+    $('#done').classList.add('on');
+
+    window.scrollTo({ top:0 });
+    $('#overlay').classList.add('on');
+    document.body.style.overflow = 'hidden';
+    $('#btn-tutup').focus();
+  }
+
+  function tutupPopup(){
+    $('#overlay').classList.remove('on');
+    document.body.style.overflow = '';
+  }
+
+  $('#btn-tutup').addEventListener('click', tutupPopup);
+  $('#overlay').addEventListener('click', function(e){
+    if (e.target === this) tutupPopup();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && $('#overlay').classList.contains('on')) tutupPopup();
+  });
+})();
+</script>
+</body>
+</html>
