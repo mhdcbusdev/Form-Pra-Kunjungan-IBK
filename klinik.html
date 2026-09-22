@@ -11,12 +11,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <!-- ============================================================
-     KONFIGURASI — HANYA BAGIAN INI YANG PERLU DIUBAH
-     Harus sama dengan API_URL di index.html
+     KONFIGURASI — semua setelan ada di file config.js
      ============================================================ -->
-<script>
-  window.IBK_CONFIG = { API_URL: 'https://script.google.com/macros/s/AKfycbwhOMgOujqH85b3sPBAZB-GHUTksMryvIjkx38G1gvA8VyMmAQ7ttuXCIMl9uaqLI6j/exec' };
-</script>
+<script src="config.js"></script>
 
 <style>
 :root{
@@ -124,6 +121,23 @@ h1{
   font-weight:600;line-height:1.55;
 }
 
+/* ---------- Kartu panduan penanganan (per kondisi) ---------- */
+.panduan{
+  margin-top:24px;background:var(--blue-soft);border:1.5px solid #D5E5F7;
+  border-radius:16px;padding:17px 18px;
+}
+.panduan h3{
+  margin:0 0 4px;font-size:15px;font-weight:800;color:var(--blue);
+  display:flex;align-items:center;gap:8px;
+}
+.panduan p{margin:0 0 13px;font-size:13.5px;line-height:1.5;color:var(--ink-soft);font-weight:600}
+.panduan a.buka{
+  display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+  background:var(--blue);color:#fff;border-radius:99px;
+  padding:10px 18px;font-size:14.5px;font-weight:700;
+}
+.panduan a.buka:active{background:#255c9c}
+
 /* ---------- Footer sheet ---------- */
 .jejak{
   margin-top:26px;padding-top:16px;border-top:2px dashed var(--line);
@@ -227,6 +241,12 @@ h1{
         <p id="v-penenang">—</p>
       </div>
     </div>
+  </section>
+
+  <section class="panduan hide" id="panduan">
+    <h3>&#128218; <span id="v-panduan-judul">Panduan Penanganan</span></h3>
+    <p>Ringkasan penatalaksanaan perilaku, perawatan, dan pencegahan gigi untuk kondisi pasien ini. Mohon dibaca dokter dan perawat yang bertugas.</p>
+    <a class="buka" id="v-panduan-link" href="#" target="_blank" rel="noopener">Buka panduan (PDF)</a>
   </section>
 
   <section class="detail">
@@ -410,6 +430,27 @@ h1{
     if (/lainnya/i.test(kebutuhan) && d.jenis_lainnya) kebutuhan = d.jenis_lainnya;
     else if (d.jenis_lainnya) kebutuhan += ' (' + d.jenis_lainnya + ')';
     isi('#v-kebutuhan', kebutuhan);
+
+    /* panduan penanganan sesuai kondisi (tampil hanya kalau ada) */
+    var PANDUAN = [
+      { cocok:/asd|autis/i,      file:'asd.pdf',            nama:'Autisme (ASD)' },
+      { cocok:/adhd/i,           file:'adhd.pdf',           nama:'ADHD' },
+      { cocok:/cerebral|palsy/i, file:'cerebral-palsy.pdf', nama:'Cerebral Palsy' },
+      { cocok:/down/i,           file:'down-syndrome.pdf',  nama:'Down Syndrome' },
+      { cocok:/epilep/i,         file:'epilepsi.pdf',       nama:'Epilepsi' }
+    ];
+    var jenis = String(d.jenis_kebutuhan || '');
+    var p = null;
+    for (var i = 0; i < PANDUAN.length; i++){
+      if (PANDUAN[i].cocok.test(jenis)){ p = PANDUAN[i]; break; }
+    }
+    if (p){
+      $('#v-panduan-judul').textContent = 'Panduan Penanganan Pasien ' + p.nama;
+      $('#v-panduan-link').setAttribute('href', p.file);
+      tampil('#panduan');
+    } else {
+      sembunyi('#panduan');
+    }
 
     isi('#v-ortu', d.nama_ortu);
 
