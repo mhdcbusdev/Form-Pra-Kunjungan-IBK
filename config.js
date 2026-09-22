@@ -17,7 +17,7 @@ window.IBK_CONFIG = {
 	   Ambil dari: Deploy > Manage deployments > salin "Web app URL".
 	   WAJIB diisi - kalau kosong, form tidak bisa dikirim dan
 	   halaman klinik tidak bisa membaca data. */
-	API_URL: 'https://script.google.com/macros/s/AKfycbwhOMgOujqH85b3sPBAZB-GHUTksMryvIjkx38G1gvA8VyMmAQ7ttuXCIMl9uaqLI6j/exec',
+	API_URL: 'https://script.google.com/macros/s/AKfycbykwX6c7yGud_ESkDvUHV4TfWot3_AZZXg9CpMX_r83kOnsjMzi_2VoI8R5X8lZemE/exec',
 
 	/* Alamat halaman klinik. Dipakai Code.gs untuk membuat link WA.
 	   Ubah kalau nama repo GitHub berbeda. */
